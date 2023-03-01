@@ -5,6 +5,7 @@ import {
 import NextNProgress from 'nextjs-progressbar'
 
 import Layout from '@/components/Layout'
+import ScrolltoTop from '@/components/ScrolltoTop'
 import '@/styles/globals.css'
 
 const queryClient = new QueryClient()
@@ -15,6 +16,7 @@ export default function App ({ Component, pageProps }) {
       <Layout>
         <NextNProgress options={{ showSpinner: false }} />
         <Component {...pageProps} />
+        <ScrolltoTop />
       </Layout>
     </QueryClientProvider>
   )
