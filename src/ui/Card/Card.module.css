@@ -1,0 +1,24 @@
+.container{
+  position: relative;
+  transition: all .4s ease 0s;
+  animation: fadein 1s,1s ease-out 0s 1 ;
+}
+
+.body{
+  visibility: hidden;
+}
+
+.container:hover > .body{
+  visibility: visible;
+  transition: all .4s ease 0s;
+  animation: fadein 1s,1s ease-out 0s 1 ;
+}
+
+@keyframes fadein {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
