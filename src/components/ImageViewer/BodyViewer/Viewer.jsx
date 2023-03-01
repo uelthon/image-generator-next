@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 
 import styles from './BodyViewer.module.css'
@@ -20,7 +19,7 @@ const Viewer = ({ image, modelo, prompt }) => {
       style={bgImage}
       className={`w-full h-full flex justify-center items-center relative ${styles.containerViewer}`}
     >
-      <Image
+      <img
         className='object-contain z-50'
         width={500}
         height={500}

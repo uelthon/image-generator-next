@@ -4,7 +4,7 @@ import React from 'react'
 const Metadata = ({ image, modelo, name }) => {
   return (
     <Head>
-      <title>{name}</title>
+      <title>Gallery - {name}</title>
       <meta property='og:url' content={window.location.href} />
       <meta property='og:type' content='website' />
       <meta property='og:title' content={name} />

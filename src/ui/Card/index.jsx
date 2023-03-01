@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 import SavetoGallery from '../../components/SavetoGallery'
 import styles from './Card.module.css'
-import Image from 'next/image'
 
 export const CardGallery = ({ modelo, image, prompt, name, imageId }) => {
   const router = useRouter()
@@ -17,13 +16,13 @@ export const CardGallery = ({ modelo, image, prompt, name, imageId }) => {
       className={`${styles.container} rounded-lg shadow-xl cursor-pointer`}
       onClick={handleClick}
     >
-      <Image
+      <img
         className='w-full h-full object-cover rounded-lg'
         width={500}
         height={500}
         src={image}
         alt={`Generate image by ${modelo} with prompt ${prompt}`}
-        loading='eager'
+        loading='lazy'
       />
       <div className={`${styles.body} bg-black bg-opacity-80 p-4 flex flex-col justify-start gap-1 absolute top-0 left-0 w-full h-full rounded-lg`}>
         <h2 className='text-xl capitalize text-primary text-opacity-90'>{name}</h2>
