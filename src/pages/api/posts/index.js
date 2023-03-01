@@ -1,9 +1,9 @@
 import startDB from '@/lib/mongodb/connect'
 import Post from '@/lib/mongodb/models/post'
 
-startDB()
-
 export default async function handler (req, res) {
+  await startDB()
+
   if (req.method === 'GET') {
     const {
       offset = 0,

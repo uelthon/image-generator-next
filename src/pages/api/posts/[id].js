@@ -1,9 +1,8 @@
 import startDB from '@/lib/mongodb/connect'
 import Post from '@/lib/mongodb/models/post'
 
-startDB()
-
 export default async function handler (req, res) {
+  await startDB()
   if (req.method === 'GET') {
     try {
       const post = await Post.findById(req.query.id)
