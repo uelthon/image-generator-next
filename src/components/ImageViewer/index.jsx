@@ -14,7 +14,7 @@ const ImageViewer = ({ id }) => {
   if (!id) return null
 
   const handleClick = () => {
-    router.push(router.pathname)
+    router.push('/gallery')
   }
 
   return (

@@ -8,7 +8,7 @@ export const CardGallery = ({ modelo, image, prompt, name, imageId }) => {
   const router = useRouter()
 
   const handleClick = () => {
-    router.push(`/gallery?imageId=${imageId}`)
+    router.push(`/gallery/${imageId}`)
   }
 
   return (
